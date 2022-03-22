@@ -1,0 +1,38 @@
+{
+  "mahasiswa": [
+    {
+      "NIM": "1941720110",
+      "nama": "Auzan Ihtifazhuddin",
+      "alamat": "Kota Jember",
+      "hp": "081234018065",
+      "angkatan": 2019,
+      "status": "aktif"
+    },
+    {
+      "NIM": "1941720147",
+      "nama": "Navis Abdillah",
+      "alamat": "Kota Malang",
+      "hp": "12345",
+      "angkatan": "2019",
+      "status": "Aktif"
+    },
+    {
+      "NIM": "1941720110",
+      "nama": "Auzan",
+      "alamat": "Jember",
+      "hp": "081234018065",
+      "angkatan": "2020",
+      "status": "Aktif",
+      "id": 1647950451286
+    },
+    {
+      "NIM": "1941720110",
+      "nama": "Auzan",
+      "alamat": "TEs",
+      "hp": "081234018065",
+      "angkatan": "2020",
+      "status": "Aktif",
+      "id": 1647950461962
+    }
+  ]
+}
