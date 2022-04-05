@@ -4,8 +4,8 @@ import {
   Switch,
   Route,
   Link,
-  // useParams, //Praktikum B
-  // useRouteMatch, //Praktikum C
+  useParams, //Praktikum B
+  useRouteMatch, //Praktikum C
   Redirect,
   useHistory,
   useLocation // Praktikum D

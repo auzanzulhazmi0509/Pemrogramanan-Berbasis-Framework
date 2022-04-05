@@ -3,7 +3,7 @@ import {
     REMOVE_TODO,
     TOGGLE_TODO,
     SET_VISIBILITY_FILTER
-} from './actionTypes'
+} from './actionsTypes'
 
 let ToDoId = 2;
 

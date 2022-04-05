@@ -4,9 +4,10 @@ import {
     deleteTodo,
     toggleTodo,
     setVisibilityFilter
-} from "../actions/actionCreator";
+} from "../actions/actionCreator.js";
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from "../actions/actionsTypes";
 import { bindActionCreators } from "redux";
+
 class Table extends Component {
     render() {
         return (
@@ -19,21 +20,21 @@ class Table extends Component {
                             onClick={() => this.props.setVisibilityFilter(SHOW_ALL)}
                         >
                             All
- </li>
+                        </li>
                         <li
                             className={"breadcrumb-item " + (this.props.visibilityFilter ===
                                 SHOW_COMPLETED ? 'active' : '')}
                             onClick={() => this.props.setVisibilityFilter(SHOW_COMPLETED)}
                         >
                             Completed
- </li>
+                        </li>
                         <li
                             className={"breadcrumb-item " + (this.props.visibilityFilter === SHOW_ACTIVE ?
                                 'active' : '')}
                             onClick={() => this.props.setVisibilityFilter(SHOW_ACTIVE)}
                         >
                             Active
- </li>
+                        </li>
                     </ol>
                 </nav>
                 {this.props.todos.length !== 0 ? (
@@ -59,7 +60,7 @@ class Table extends Component {
                                     </td>
                                     <td>
                                         <span
-                                            className="fas fa-minus-circle"
+                                            className="bi bi-dash-square"
                                             onClick={() => this.props.deleteTodo(todo.id)}
                                             style={{
                                                 color: "white",
@@ -68,7 +69,7 @@ class Table extends Component {
                                             }}
                                         />
                                         <span
-                                            className="fas fa-check-circle"
+                                            className="bi bi-check-square"
                                             onClick={() => this.props.toggleTodo(todo.id)}
                                             style={{ color: "white", fontSize: "20pt" }}
                                         />
@@ -78,19 +79,20 @@ class Table extends Component {
                         </tbody>
                     </table>
                 ) : (
-                        <div
-                            style={{ marginTop: "50px" }}
-                            className="col-lg-10 col-md-10 col-xs-12 col-sm-12 offset-lg-1"
-                        >
-                            <div className="alert alert-danger" role="alert">
-                                Todo List is empty or Filter results show no results
- </div>
+                    <div
+                        style={{ marginTop: "50px" }}
+                        className="col-lg-10 col-md-10 col-xs-12 col-sm-12 offset-lg-1"
+                    >
+                        <div className="alert alert-danger" role="alert">
+                            Todo List is empty or Filter results show no results
                         </div>
-                    )}{" "}
+                    </div>
+                )}{" "}
             </div>
         );
     }
 }
+
 const getVisibleTodos = (todos, filter) => {
     switch (filter) {
         case SHOW_ALL:
@@ -103,12 +105,14 @@ const getVisibleTodos = (todos, filter) => {
             throw new Error("Unknown filter: " + filter);
     }
 };
+
 const mapStateToProps = state => {
     return {
         todos: getVisibleTodos(state.todos, state.visibilityFilter),
         visibilityFilter: state.visibilityFilter
     };
 };
+
 const mapDispatchToProps = dispatch => {
     return bindActionCreators(
         {
@@ -119,4 +123,5 @@ const mapDispatchToProps = dispatch => {
         dispatch
     );
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(Table);
