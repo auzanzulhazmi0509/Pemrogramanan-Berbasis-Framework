@@ -17,13 +17,6 @@ class Mahasiswa extends Component {
     }
 
     handleTambahArtikel = (event) => {
-        // let fromInsertArtikel = { ...this.state.insertArtikel };
-        // let timestamp = new Date().getTime();
-        // fromInsertArtikel["id"] = timestamp;
-        // fromInsertArtikel[event.target.name] = event.target.value;
-        // this.setState({
-        //     insertArtikel: fromInsertArtikel
-        // })
         let fromInsertMhs = { ...this.state.insertMahasiswa };
         let timestamp = new Date().getTime();
         fromInsertMhs["id"] = timestamp;
