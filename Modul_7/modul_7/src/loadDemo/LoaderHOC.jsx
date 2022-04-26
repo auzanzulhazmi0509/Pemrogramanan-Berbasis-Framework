@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './LoaderIndicator.css';
+import './LoaderIndicator.css'
+
 const isEmpty = (prop) => (
     prop === null ||
     prop === undefined ||
@@ -9,11 +10,13 @@ const isEmpty = (prop) => (
 
 const LoadIndicator = (loadingProp) => (WrappedComponent) => {
     return class LoadIndicator extends Component {
-        
+
         render() {
 
-    return isEmpty(this.props[loadingProp]) ? <div className="loader" /> : <WrappedComponent {...this.props}/>;
+            return isEmpty(this.props[loadingProp]) ? <div className="loader" /> : <
+                WrappedComponent {...this.props} />;
+        }
+    }
 }
-}
-}
+
 export default LoadIndicator;

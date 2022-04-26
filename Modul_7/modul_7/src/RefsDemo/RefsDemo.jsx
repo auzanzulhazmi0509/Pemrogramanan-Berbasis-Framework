@@ -35,4 +35,5 @@ class SampleComponent extends Component {
         )
     }
 }
+
 export default RefsDemo;

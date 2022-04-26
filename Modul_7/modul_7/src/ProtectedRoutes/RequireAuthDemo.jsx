@@ -25,8 +25,7 @@ class RequireAuthDemo extends Component {
 
                 <Switch>
                     <Route exact path={`${match.path}/home/`} component={Home} />
-                    <Route path={`${match.path}/contacts`} render={() => <AuthContac
-                        ts authenticated={this.state.authenticated} {...this.props} />} />
+                    <Route path={`${match.path}/contacts`} render={() => <AuthContacts authenticated={this.state.authenticated} {...this.props} />} />
                 </Switch>
             </div>
 
