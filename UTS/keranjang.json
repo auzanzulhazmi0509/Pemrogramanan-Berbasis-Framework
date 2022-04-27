@@ -1,0 +1,23 @@
+{
+  "cart": [
+    {
+      "userId": 1,
+      "id": 1649811578817,
+      "nama": "XIAOMI NOTE 9 4/64 & 6/128",
+      "harga": 2479000,
+      "total_qty": 1,
+      "total_harga": 2479000
+    },
+    {
+      "userId": 2,
+      "id": 1649811584685,
+      "nama": "Samsung Galaxy M51 Smartphone [128GB/ 8GB]",
+      "harga": 4979000,
+      "total_qty": 1,
+      "total_harga": 4979000
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

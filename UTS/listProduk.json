@@ -1,0 +1,88 @@
+{
+  "barang": [
+    {
+      "userId": 1,
+      "id": 1,
+      "nama": "XIAOMI NOTE 9 4/64 & 6/128",
+      "image": "https://p.ipricegroup.com/uploaded_f4a26d4fd5185d5b1f0b2808989f4c0f.jpg",
+      "harga": 2479000,
+      "stok": 7
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "nama": "Samsung Galaxy M51 Smartphone [128GB/ 8GB]",
+      "image": "https://asset.kompas.com/crops/M1ctWrX4JgUvamSVwOrdwijaVk8=/288x137:1084x668/750x500/data/photo/2020/10/10/5f8125e38a25c.jpg",
+      "harga": 4979000 ,
+      "stok": 19
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "nama": "iPhone 12 Pro Max 256GB",
+      "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2020/10/16/c67e2a03-5e08-4bce-bba1-08d3c20d2d53.jpg",
+      "harga": 22290000,
+      "stok": 5
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "nama": "OPPO Reno3 Pro Smartphone [256GB/ 8GB] ",
+      "image": "https://images.tokopedia.net/img/cache/500-square/product-1/2020/5/27/batch-upload/batch-upload_603048c6-11b5-4944-a9e2-3688cc944eba.webp",
+      "harga": 8799000,
+      "stok": 7
+    },
+    {
+      "userId": 1,
+      "id": 5,
+      "nama": "vivo Y30 ",
+      "image": "https://cdn.eraspace.com/pub/media/catalog/product/v/i/vivo_y30_moonstonewhite_1.jpg",
+      "harga": 2460000,
+      "stok": 20
+    },
+    {
+      "userId": 1,
+      "id": 6,
+      "nama": "Xiaomi Redmi Note 9",
+      "image": "https://cdn.eraspace.com/pub/media/catalog/product/r/e/redmi_note_9_polar_white_1.jpg",
+      "harga": 2215000,
+      "stok": 4
+    },
+    {
+      "userId": 1,
+      "id": 7,
+      "nama": "Redmi Note 10 Pro Max ",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note10-pro-india.jpg",
+      "harga": 8999000,
+      "stok": 3
+    },
+    {
+      "userId": 1,
+      "id": 8,
+      "nama": "Realme 5 Pro ",
+      "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//96/MTA-4247952/realme_realme_5_pro_smartphone_-128gb-_4gb-_full05_qd7kkh85.jpg",
+      "harga": 2775000,
+      "stok": 12
+    },
+    {
+      "userId": 1,
+      "id": 9,
+      "nama": "ASUS ROG PHONE 3 5G Ram 12GB / 128GB SD 865 ",
+      "image": "https://id-test-11.slatic.net/p/399a97e0bf2baa538d04fc1fc3697d55.jpg_720x720q80.jpg_.webp",
+      "harga": 13400000,
+      "stok": 9
+    },
+    {
+      "userId": 1,
+      "id": 10,
+      "nama": "Xiaomi POCOPHONE F1 ",
+      "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//96/MTA-2774472/xiaomi_xiaomi-pocophone-f1-smartphone--128gb-6gb-_full06.jpg",
+      "harga": 4800000,
+      "stok": 6
+    }
+    
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
