@@ -32,12 +32,6 @@
     },
     {
       "userId": 1,
-      "id": 1647433422365,
-      "title": "Auzan",
-      "body": "Auzan"
-    },
-    {
-      "userId": 1,
       "id": 1647433696224,
       "title": "Tes web",
       "body": "Nama : Auzan Ihtifazhuddin"
@@ -47,6 +41,12 @@
       "id": 1648556590686,
       "title": "Tes",
       "body": "TesTes Auzan"
+    },
+    {
+      "userId": 1,
+      "id": 1651018636537,
+      "title": "auzan",
+      "body": "tes"
     }
   ],
   "comments": [],
