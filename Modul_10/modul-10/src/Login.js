@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
-import { AuthContext } from './index';
+import { AuthContext } from './App';
+import firebase from 'firebase/compat/app';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -9,8 +10,18 @@ const Login = () => {
     const Auth = useContext(AuthContext);
     const handleForm = e => {
         e.preventDefault();
-        console.log(Auth);
-        Auth.setLoggedIn(true);
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .then(res => {
+                if (res.user) {
+                    Auth.setLoggedIn(true);
+                    alert("User Login Successfully");
+                }
+            })
+            .catch(err => {
+                setErrors(err.message);
+            })
     };
 
     return (
@@ -23,6 +34,7 @@ const Login = () => {
                     name="email"
                     type="email"
                     placeholder="email"
+                    required
                 />
                 <input
                     onChange={e => setPassword(e.target.value)}
@@ -30,6 +42,7 @@ const Login = () => {
                     value={password}
                     type="password"
                     placeholder="password"
+                    required
                 />
                 <hr />
                 <button className="googleBtn" type="button">

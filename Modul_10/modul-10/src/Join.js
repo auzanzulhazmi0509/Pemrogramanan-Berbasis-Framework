@@ -1,17 +1,40 @@
 import React, { useState, useContext } from 'react';
-import { AuthContext } from './index';
+import { AuthContext } from './App';
+import {
+    createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithPopup
+} from 'firebase/auth';
+import { firebaseInit } from '.';
+
 
 const Join = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setErrors] = useState("");
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [error, setError] = useState("")
 
-    const Auth = useContext(AuthContext);
+    const auth = getAuth(firebaseInit)
+    const googleProvider = new GoogleAuthProvider()
+
+    const Auth = useContext(AuthContext)
     const handleForm = e => {
-        e.preventDefault();
-        console.log(Auth);
-        Auth.setLoggedIn(true);
-    };
+        e.preventDefault()
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(res => {
+                if (res.user) Auth.setLoggedIn(true)
+            })
+            .catch(e => {
+                setError(e.message)
+            })
+    }
+
+    const handleSignInWithPopUp = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(res => {
+                if (res.user) Auth.setLoggedIn(true)
+            }).catch(e => {
+                setError(e.message)
+            })
+    }
+        
 
     return (
         <div>
