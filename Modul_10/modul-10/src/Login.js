@@ -1,28 +1,42 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from './App';
-import firebase from 'firebase/compat/app';
+import React from 'react'
+import { useContext } from 'react'
+import { useState } from 'react'
+import { AuthContext } from './App'
+import {
+    signInWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithPopup
+} from 'firebase/auth';
+import { firebaseInit } from '.';
 
 const Login = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setErrors] = useState("");
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [error, setError] = useState("")
 
-    const Auth = useContext(AuthContext);
+    const auth = getAuth(firebaseInit)
+    const googleProvider = new GoogleAuthProvider()
+
+    const Auth = useContext(AuthContext)
     const handleForm = e => {
-        e.preventDefault();
-        firebase
-            .auth()
-            .signInWithEmailAndPassword(email, password)
+        e.preventDefault()
+        console.log(Auth)
+
+        signInWithEmailAndPassword(auth, email, password)
             .then(res => {
-                if (res.user) {
-                    Auth.setLoggedIn(true);
-                    alert("User Login Successfully");
-                }
+                if (res.user) Auth.setLoggedIn(true)
             })
-            .catch(err => {
-                setErrors(err.message);
+            .catch(e => {
+                setError(e.message)
             })
-    };
+    }
+
+    const handleSignInWithPopUp = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(res => {
+                if (res.user) Auth.setLoggedIn(true)
+            }).catch(e => {
+                setError(e.message)
+            })
+    }
 
     return (
         <div>
@@ -33,29 +47,27 @@ const Login = () => {
                     onChange={e => setEmail(e.target.value)}
                     name="email"
                     type="email"
-                    placeholder="email"
-                    required
-                />
+                    placeholder="email" />
                 <input
+                    value={password}
                     onChange={e => setPassword(e.target.value)}
                     name="password"
-                    value={password}
                     type="password"
-                    placeholder="password"
-                    required
-                />
+                    placeholder="password" />
                 <hr />
-                <button className="googleBtn" type="button">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="logo" />
-                    Login With Google
+                <button 
+                    className="googleBtn"
+                    onClick={handleSignInWithPopUp}>
+                    <img
+                        src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
+                        alt="logo" />
+                    Login with Google
                 </button>
                 <button type="submit">Login</button>
-                <hr />
                 <span>{error}</span>
             </form>
         </div>
-    );
-
-};
+    )
+}
 
 export default Login;

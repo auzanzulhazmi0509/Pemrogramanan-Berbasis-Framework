@@ -1,10 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from './App';
+import React from 'react'
+import { useContext } from 'react'
+import { useState } from 'react'
+import { AuthContext } from './App'
 import {
     createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithPopup
 } from 'firebase/auth';
 import { firebaseInit } from '.';
-
 
 const Join = () => {
     const [email, setEmail] = useState("")
@@ -34,7 +35,6 @@ const Join = () => {
                 setError(e.message)
             })
     }
-        
 
     return (
         <div>
@@ -45,27 +45,27 @@ const Join = () => {
                     onChange={e => setEmail(e.target.value)}
                     name="email"
                     type="email"
-                    placeholder="email"
-                />
+                    placeholder="email" />
                 <input
+                    value={password}
                     onChange={e => setPassword(e.target.value)}
                     name="password"
-                    value={password}
                     type="password"
-                    placeholder="password"
-                />
+                    placeholder="password" />
                 <hr />
-                <button className="googleBtn" type="button">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="logo" />
-                    Join With Google
+                <button 
+                    className="googleBtn"
+                    onClick={handleSignInWithPopUp}>
+                    <img
+                        src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
+                        alt="logo" />
+                    Login with Google
                 </button>
                 <button type="submit">Join</button>
-                <hr />
                 <span>{error}</span>
             </form>
         </div>
-    );
-
-};
+    )
+}
 
 export default Join;
