@@ -59,7 +59,7 @@ const Join = () => {
                     <img
                         src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
                         alt="logo" />
-                    Login with Google
+                    Join with Google
                 </button>
                 <button type="submit">Join</button>
                 <span>{error}</span>
