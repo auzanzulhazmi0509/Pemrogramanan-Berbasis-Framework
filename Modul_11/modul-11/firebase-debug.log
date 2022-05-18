@@ -1,0 +1,21 @@
+[debug] [2022-05-18T01:57:54.060Z] ----------------------------------------------------------------------
+[debug] [2022-05-18T01:57:54.061Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-18T01:57:54.062Z] CLI Version:   10.9.2
+[debug] [2022-05-18T01:57:54.062Z] Platform:      win32
+[debug] [2022-05-18T01:57:54.062Z] Node Version:  v16.14.0
+[debug] [2022-05-18T01:57:54.063Z] Time:          Wed May 18 2022 08:57:54 GMT+0700 (Waktu Indonesia Barat)
+[debug] [2022-05-18T01:57:54.063Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-18T01:57:54.070Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-18T01:57:54.070Z] > authorizing via signed-in user (1941720110@student.polinema.ac.id)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Polinema MatKul-Sem6\Pemrogramanan Berbasis Framework\Modul_11\modul-11
+
