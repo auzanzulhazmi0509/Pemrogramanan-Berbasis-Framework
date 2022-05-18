@@ -30,71 +30,71 @@ const loginError = () => {
     };
 };
 
-const requestLogout = () => {
-    return {
-        type: LOGOUT_REQUEST
-    };
-};
+// const requestLogout = () => {
+//     return {
+//         type: LOGOUT_REQUEST
+//     };
+// };
 
-const receiveLogout = () => {
-    return {
-        type: LOGOUT_SUCCESS,
-    };
-};
+// const receiveLogout = () => {
+//     return {
+//         type: LOGOUT_SUCCESS,
+//     };
+// };
 
-const logoutError = () => {
-    return {
-        type: LOGOUT_FAILURE
-    };
-};
+// const logoutError = () => {
+//     return {
+//         type: LOGOUT_FAILURE
+//     };
+// };
 
-const vertifyRequest = () => {
-    return {
-        type: VERTIFY_REQUEST
-    };
-};
+// const vertifyRequest = () => {
+//     return {
+//         type: VERTIFY_REQUEST
+//     };
+// };
 
-const vertifySuccess = () => {
-    return {
-        type: VERTIFY_SUCCESS
-    };
-};
+// const vertifySuccess = () => {
+//     return {
+//         type: VERTIFY_SUCCESS
+//     };
+// };
 
-export const loginUser = (email, password) => dispatch => {
-    dispatch(requestLogin());
-    myFirebase
-        .auth()
-        .signInWithEmailAndPassword(email, password)
-        .then(user => {
-            dispatch(loginUser(user));
-        })
-        .catch(error => {
-            dispatch(loginError());
-        })
-}
+// export const loginUser = (email, password) => dispatch => {
+//     dispatch(requestLogin());
+//     myFirebase
+//         .auth()
+//         .signInWithEmailAndPassword(email, password)
+//         .then(user => {
+//             dispatch(loginUser(user));
+//         })
+//         .catch(error => {
+//             dispatch(loginError());
+//         })
+// }
 
-export const logoutUser = () => dispatch => {
-    dispatch(requestLogout());
-    myFirebase
-        .auth()
-        .signOut()
-        .then(res => {
-            dispatch(receiveLogout());
-        })
-        .catch(error => {
-            dispatch(logoutError());
-        })
-}
+// export const logoutUser = () => dispatch => {
+//     dispatch(requestLogout());
+//     myFirebase
+//         .auth()
+//         .signOut()
+//         .then(res => {
+//             dispatch(receiveLogout());
+//         })
+//         .catch(error => {
+//             dispatch(logoutError());
+//         })
+// }
 
-export const vertifyAuth = () => dispatch => {
-    dispatch(vertifyRequest());
-    myFirebase.auth().onAuthStateChanged(user => {
-        if (user != null) {
-            dispatch(receiveLogin());
-        }
-        dispatch(vertifySuccess());
-    })
-}
+// export const vertifyAuth = () => dispatch => {
+//     dispatch(vertifyRequest());
+//     myFirebase.auth().onAuthStateChanged(user => {
+//         if (user != null) {
+//             dispatch(receiveLogin());
+//         }
+//         dispatch(vertifySuccess());
+//     })
+// }
 
 
 
