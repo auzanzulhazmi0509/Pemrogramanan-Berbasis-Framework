@@ -1,21 +1,32 @@
-[debug] [2022-05-18T01:57:54.060Z] ----------------------------------------------------------------------
-[debug] [2022-05-18T01:57:54.061Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2022-05-18T01:57:54.062Z] CLI Version:   10.9.2
-[debug] [2022-05-18T01:57:54.062Z] Platform:      win32
-[debug] [2022-05-18T01:57:54.062Z] Node Version:  v16.14.0
-[debug] [2022-05-18T01:57:54.063Z] Time:          Wed May 18 2022 08:57:54 GMT+0700 (Waktu Indonesia Barat)
-[debug] [2022-05-18T01:57:54.063Z] ----------------------------------------------------------------------
+[debug] [2022-05-18T02:10:53.904Z] ----------------------------------------------------------------------
+[debug] [2022-05-18T02:10:53.906Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2022-05-18T02:10:53.906Z] CLI Version:   10.9.2
+[debug] [2022-05-18T02:10:53.907Z] Platform:      win32
+[debug] [2022-05-18T02:10:53.907Z] Node Version:  v16.14.0
+[debug] [2022-05-18T02:10:53.908Z] Time:          Wed May 18 2022 09:10:53 GMT+0700 (Waktu Indonesia Barat)
+[debug] [2022-05-18T02:10:53.908Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-05-18T01:57:54.070Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-05-18T01:57:54.070Z] > authorizing via signed-in user (1941720110@student.polinema.ac.id)
+[debug] [2022-05-18T02:10:53.967Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-18T02:10:53.967Z] > authorizing via signed-in user (1941720110@student.polinema.ac.id)
+[debug] [2022-05-18T02:10:53.967Z] [iam] checking project modul11-9798f for permissions ["firebase.projects.get"]
+[debug] [2022-05-18T02:10:53.970Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/modul11-9798f:testIamPermissions [none]
+[debug] [2022-05-18T02:10:53.970Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/modul11-9798f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-05-18T02:10:55.348Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/modul11-9798f:testIamPermissions 200
+[debug] [2022-05-18T02:10:55.348Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/modul11-9798f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-05-18T02:10:55.349Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/modul11-9798f [none]
+[debug] [2022-05-18T02:10:55.818Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/modul11-9798f 200
+[debug] [2022-05-18T02:10:55.818Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/modul11-9798f {"projectId":"modul11-9798f","projectNumber":"346567646862","displayName":"modul11","name":"projects/modul11-9798f","resources":{"hostingSite":"modul11-9798f","storageBucket":"modul11-9798f.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
 [info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  E:\Polinema MatKul-Sem6\Pemrogramanan Berbasis Framework\Modul_11\modul-11
-
+[info] === Serving from 'E:\Polinema MatKul-Sem6\Pemrogramanan Berbasis Framework\Modul_11\modul-11'...
+[info] 
+[debug] [2022-05-18T02:10:55.820Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/modul11-9798f/sites 
+[debug] [2022-05-18T02:10:57.380Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/modul11-9798f/sites 200
+[debug] [2022-05-18T02:10:57.380Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/modul11-9798f/sites {"sites":[{"name":"projects/modul11-9798f/sites/modul11-9798f","defaultUrl":"https://modul11-9798f.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2022-05-18T02:10:57.380Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/modul11-9798f/webApps/-/config [none]
+[debug] [2022-05-18T02:10:58.103Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/modul11-9798f/webApps/-/config 200
+[debug] [2022-05-18T02:10:58.103Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/modul11-9798f/webApps/-/config {"projectId":"modul11-9798f","storageBucket":"modul11-9798f.appspot.com","locationId":"us-central","apiKey":"AIzaSyAj0wV8dIm3_N0r5cXoUB57WRfubBryhPc","authDomain":"modul11-9798f.firebaseapp.com","messagingSenderId":"346567646862"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [18/May/2022:02:12:53 +0000] "GET / HTTP/1.1" 200 1721 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/May/2022:02:12:53 +0000] \"GET / HTTP/1.1\" 200 1721 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0\""}}
+[info] i  hosting: 127.0.0.1 - - [18/May/2022:02:12:53 +0000] "GET /%PUBLIC_URL%/logo192.png HTTP/1.1" 500 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/May/2022:02:12:53 +0000] \"GET /%PUBLIC_URL%/logo192.png HTTP/1.1\" 500 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0\""}}
+[info] i  hosting: 127.0.0.1 - - [18/May/2022:02:12:53 +0000] "GET /%PUBLIC_URL%/favicon.ico HTTP/1.1" 500 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/May/2022:02:12:53 +0000] \"GET /%PUBLIC_URL%/favicon.ico HTTP/1.1\" 500 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0\""}}
